@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informes y exportación - Dolibarr</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="contenedor nav">
+      <a href="index.html" class="logo">SGE</a>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sge.html">¿Qué es un SGE?</a></li>
+        <li><a href="instalacion.html">Instalación</a></li>
+        <li><a href="administracion.html">Administración</a></li>
+        <li><a href="informes.html">Informes</a></li>
+      </ul>
+      <button class="hamburguesa" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="contenedor">
+
+      <h1>Informes y exportación</h1>
+
+      <p>Toda la información introducida en el SGE se puede consultar en forma de informes o exportar a otros formatos para analizarla fuera del sistema.</p>
+
+      <h2>Informes integrados</h2>
+
+      <p>Dolibarr incluye varios informes desde el menú <strong>Contabilidad → Informes</strong>. Los más utilizados son:</p>
+
+      <table>
+        <tr>
+          <th>Informe</th>
+          <th>Qué muestra</th>
+        </tr>
+        <tr>
+          <td>Volumen de negocio</td>
+          <td>Facturación por mes y año.</td>
+        </tr>
+        <tr>
+          <td>Ventas por cliente</td>
+          <td>Ranking de clientes por facturación.</td>
+        </tr>
+        <tr>
+          <td>Ventas por producto</td>
+          <td>Productos más vendidos.</td>
+        </tr>
+        <tr>
+          <td>Estado de stock</td>
+          <td>Existencias actuales y productos bajo mínimo.</td>
+        </tr>
+        <tr>
+          <td>Cobros y pagos</td>
+          <td>Calendario de cobros previstos y pagos pendientes.</td>
+        </tr>
+      </table>
+
+      <div class="captura">
+        <img src="img/captura10.png" alt="Informe de volumen de negocio">
+        <p class="captura-texto"><strong>Captura 10:</strong> Informe de volumen de negocio</p>
+      </div>
+
+      <h2>Cuadro de mando</h2>
+
+      <p>La pantalla de inicio de Dolibarr es un cuadro de mando que muestra de un vistazo: facturas pendientes, presupuestos en curso, gráficos de ventas y tareas del día.</p>
+
+      <p>Cada usuario puede personalizar qué información ver desde el botón <strong>Personalizar el cuadro de mando</strong>.</p>
+
+
+      <h2>Estadísticas por módulo</h2>
+
+      <p>Además, cada módulo (Facturas, Productos, Terceros…) tiene su propia pestaña de <strong>Estadísticas</strong> con gráficos interactivos.</p>
+
+
+      <h2 id="exportacion">Exportación de información</h2>
+
+      <p>Dolibarr permite exportar los datos en varios formatos:</p>
+
+      <div class="tarjetas">
+
+        <div class="tarjeta">
+          <h3>CSV</h3>
+          <p>Texto plano separado por comas. Lo lee cualquier hoja de cálculo.</p>
+        </div>
+
+        <div class="tarjeta">
+          <h3>Excel</h3>
+          <p>Formato XLSX. Mantiene fechas, números y monedas.</p>
+        </div>
+
+        <div class="tarjeta">
+          <h3>PDF</h3>
+          <p>Documento listo para imprimir. Útil para informes definitivos.</p>
+        </div>
+
+      </div>
+
+      <h2>Asistente de exportación</h2>
+
+      <p>Desde <strong>Inicio → Herramientas → Exportar</strong> se puede crear una exportación personalizada en cuatro pasos:</p>
+
+      <ol>
+        <li><strong>Elegir el tipo de datos</strong> (facturas, terceros, productos…).</li>
+        <li><strong>Seleccionar los campos</strong> que se quieren incluir.</li>
+        <li><strong>Aplicar filtros</strong> (fechas, importes, estado…).</li>
+        <li><strong>Elegir el formato</strong> (CSV, Excel, TSV) y descargar.</li>
+      </ol>
+
+
+      <div class="aviso">
+        <p><strong>Caso de uso:</strong> al final del trimestre, el asesor fiscal pide la relación de facturas. Con el asistente se genera un Excel con NIF, fecha, base imponible, IVA y total. Se manda y listo.</p>
+      </div>
+
+      <h2>Importar datos</h2>
+
+      <p>Dolibarr también permite la operación inversa: importar listados desde un CSV o Excel. Es la forma habitual de migrar datos al cambiar de programa.</p>
+
+      <div class="aviso">
+        <p><strong>Consejo:</strong> antes de cualquier importación masiva, hacer una copia de la base de datos. Si algo sale mal, restaurarla es mucho más rápido que limpiar los datos a mano.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      <p>© <span id="anio">2026</span> · Trabajo académico sobre SGE</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
