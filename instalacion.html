@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instalación de Dolibarr</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="contenedor nav">
+      <a href="index.html" class="logo">SGE</a>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sge.html">¿Qué es un SGE?</a></li>
+        <li><a href="instalacion.html">Instalación</a></li>
+        <li><a href="administracion.html">Administración</a></li>
+        <li><a href="informes.html">Informes</a></li>
+      </ul>
+      <button class="hamburguesa" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="contenedor">
+
+      <h1>Instalación de Dolibarr</h1>
+
+      <p><strong>Dolibarr</strong> es un ERP/CRM gratuito y de código abierto. Se instala fácilmente en local utilizando XAMPP, que incluye Apache, MySQL y PHP.</p>
+
+      <h2>Requisitos previos</h2>
+      <ul>
+        <li>Windows 10 u 11.</li>
+        <li>4 GB de RAM como mínimo.</li>
+        <li>Aproximadamente 1 GB de espacio libre.</li>
+        <li>Conexión a Internet para descargar los paquetes.</li>
+      </ul>
+
+      <h2>Paso 1: Instalar XAMPP</h2>
+      <p>Descargar XAMPP desde la web oficial <a href="https://www.apachefriends.org/es/" target="_blank">apachefriends.org</a> e instalarlo en <code>C:\xampp</code>.</p>
+      <p>Al terminar, abrir el panel de control de XAMPP e iniciar los servicios <strong>Apache</strong> y <strong>MySQL</strong>.</p>
+
+      <div class="captura">
+        <img src="img/captura1.png" alt="Panel de control de XAMPP con Apache y MySQL en marcha">
+        <p class="captura-texto"><strong>Captura 1:</strong> Panel de control de XAMPP con Apache y MySQL en marcha</p>
+      </div>
+
+      <h2>Paso 2: Descargar Dolibarr</h2>
+      <p>Ir a la web oficial <a href="https://www.dolibarr.org/" target="_blank">dolibarr.org</a> y descargar la última versión estable en formato <code>.zip</code>.</p>
+
+      <div class="captura">
+        <img src="img/captura2.png" alt="Página de descargas de Dolibarr">
+        <p class="captura-texto"><strong>Captura 2:</strong> Página de descargas de Dolibarr</p>
+      </div>
+
+      <h2>Paso 3: Copiar los archivos</h2>
+      <ol>
+        <li>Descomprimir el archivo <code>.zip</code>.</li>
+        <li>Copiar la carpeta resultante a <code>C:\xampp\htdocs\dolibarr</code>.</li>
+      </ol>
+
+      <h2>Paso 4: Crear la base de datos</h2>
+      <p>Abrir phpMyAdmin desde el navegador en <code>http://localhost/phpmyadmin</code> y crear una nueva base de datos llamada <code>dolibarr</code>.</p>
+
+      <div class="captura">
+        <img src="img/captura3.png" alt="Creación de la base de datos en phpMyAdmin">
+        <p class="captura-texto"><strong>Captura 3:</strong> Creación de la base de datos en phpMyAdmin</p>
+      </div>
+
+      <h2>Paso 5: Asistente de instalación</h2>
+      <p>En el navegador, ir a:</p>
+      <pre><code>http://localhost/dolibarr/htdocs/install/</code></pre>
+
+      <p>El asistente pedirá los siguientes datos:</p>
+      <ul>
+        <li>Idioma: <strong>Español</strong>.</li>
+        <li>Tipo de base de datos: <strong>MySQLi</strong>.</li>
+        <li>Servidor: <strong>localhost</strong>, puerto <strong>3306</strong>.</li>
+        <li>Nombre de la base de datos: <strong>dolibarr</strong>.</li>
+        <li>Usuario y contraseña de MySQL.</li>
+        <li>Usuario y contraseña del administrador de Dolibarr.</li>
+      </ul>
+
+      <div class="captura">
+        <img src="img/captura4.png" alt="Asistente de instalación de Dolibarr">
+        <p class="captura-texto"><strong>Captura 4:</strong> Asistente de instalación de Dolibarr</p>
+      </div>
+
+      <h2>Paso 6: Primer acceso</h2>
+      <p>Una vez terminada la instalación, acceder a:</p>
+      <pre><code>http://localhost/dolibarr/htdocs/</code></pre>
+      <p>E iniciar sesión con la cuenta de administrador creada.</p>
+
+      <div class="captura">
+        <img src="img/captura5.png" alt="Página de inicio de Dolibarr tras el primer login">
+        <p class="captura-texto"><strong>Captura 5:</strong> Página de inicio de Dolibarr tras el primer login</p>
+      </div>
+
+      <div class="aviso">
+        <p><strong>Importante:</strong> Tras la instalación es recomendable borrar la carpeta <code>install/</code> para evitar problemas de seguridad.</p>
+      </div>
+
+      <h2>Problemas frecuentes</h2>
+      <ul>
+        <li><strong>El puerto 80 está ocupado:</strong> cambiar el puerto de Apache a 8080 desde el panel de XAMPP.</li>
+        <li><strong>Error de conexión a base de datos:</strong> comprobar que MySQL está iniciado y que el usuario y contraseña son correctos.</li>
+      </ul>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      <p>© <span id="anio">2026</span> · Trabajo académico sobre SGE</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
